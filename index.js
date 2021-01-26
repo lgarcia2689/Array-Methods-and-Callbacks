@@ -6,7 +6,9 @@ import { fifaData } from './fifa.js';
 Practice accessing data by console.log-ing the following pieces of data note, you may want to filter the data first 😉*/
 
 //(a) Home Team name for 2014 world cup final
-
+const finals2014 = fifaData.filter(function(item){
+    return item.Year === 2014 && item.Stage === 'Final';
+});
 //(b) Away Team name for 2014 world cup final
 
 //(c) Home Team goals for 2014 world cup final
@@ -24,10 +26,21 @@ Use getFinals to do the following:
 hint - you should be looking at the stage key inside of the objects
 */
 
-function getFinals(/* code here */) {
-   /* code here */
-}
+// function getFinals(data) {
+//     const teamFinals = data.filter(function(item){
+//         return teamFinals;
+//       });
+ 
+// console.log(getFinals(fifaData));
 
+function getFinals(data) {
+    return data.filter(function(item) {
+        return item.Stage === 'Final';
+    });
+
+    // const bigPops = data.filter(item => item.Stage ==='Final');
+}
+console.log(getFinals(fifaData));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
